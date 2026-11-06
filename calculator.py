@@ -1,3 +1,4 @@
+import math
 def add(a, b):
     return a + b
 
@@ -11,6 +12,26 @@ def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero.")
     return a / b
+
+def square(a):
+    return a*a
+
+def power(a,b):
+    if b == 0:
+        if a == 0:
+            raise ValueError("cannot raise 0 by 0")
+        else:
+            return 1
+    return pow(a,b)
+
+def square_root(a):
+    if a < 0:
+        raise ValueError("cannot find squareroot of a negative number")
+    return math.sqrt(a)
+
+def cube_root(a):
+    return math.cbrt(a)
+
 
 def main():
     print("=== Simple Git Practice Calculator ===")
